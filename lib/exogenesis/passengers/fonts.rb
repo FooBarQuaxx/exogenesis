@@ -2,7 +2,7 @@ require 'exogenesis/support/passenger'
 
 # Installs and Removes Fonts
 class Fonts < Passenger
-  register_as :fonts
+  # register_as :fonts
   needs :fonts_path
   with_emoji :book
 

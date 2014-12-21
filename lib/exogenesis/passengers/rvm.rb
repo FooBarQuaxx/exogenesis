@@ -2,7 +2,7 @@ require 'exogenesis/support/passenger'
 
 # Manages the Ruby Version Manager RVM
 class Rvm < Passenger
-  register_as :rvm
+  # register_as :rvm
   needs :rubies
   with_emoji :cyclone
 

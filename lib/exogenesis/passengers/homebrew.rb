@@ -5,7 +5,7 @@ class Homebrew < Passenger
   INSTALL_SCRIPT = 'https://raw.github.com/mxcl/homebrew/go'
   TEARDOWN_SCRIPT = 'https://gist.github.com/mxcl/1173223/raw/a833ba44e7be8428d877e58640720ff43c59dbad/uninstall_homebrew.sh'
 
-  register_as :homebrew
+  # register_as :homebrew
   needs :brews
   with_emoji :beer
 

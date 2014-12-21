@@ -2,7 +2,7 @@ require 'exogenesis/support/passenger'
 
 # Links all files in the given directory to your home directory
 class Dotfile < Passenger
-  register_as :dotfile
+  # register_as :dotfile
   needs :directory_name
   with_emoji :house
 

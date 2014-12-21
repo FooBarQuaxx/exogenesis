@@ -3,7 +3,7 @@ require 'exogenesis/support/passenger'
 class HomebrewCask < Passenger
   CASKROOM = 'caskroom/cask'
 
-  register_as :homebrew_cask
+  # register_as :homebrew_cask
   needs :casks
   with_emoji :beer
 

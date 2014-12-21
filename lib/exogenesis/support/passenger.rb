@@ -1,18 +1,29 @@
 require 'forwardable'
 require 'exogenesis/support/executor'
+require 'exogenesis/support/monkey_patch'
 
 class Passenger
   extend Forwardable
 
+  @passengers = {}
+  @emoji_name = :alien #default
+
   class << self
     attr_accessor :passengers
+    attr_reader :emoji_name
 
     def by_name(name)
       passengers[name]
     end
 
+    def [](name)
+      by_name name
+    end
+
     def register_as(name)
-      Passenger.passengers = {} if Passenger.passengers.nil?
+      if Passenger.passengers.has_value? self
+        Passenger.passengers.delete Passenger.passengers.rassoc(self).first
+      end
       Passenger.passengers[name.to_s] = self
     end
 
@@ -24,9 +35,10 @@ class Passenger
       @emoji_name = emoji_name
     end
 
-    def emoji_name
-      @emoji_name || :alien
+    def inherited(child)
+      @passengers[child.class.name.underscore] = child
     end
+
   end
 
   def_delegators :@executor,

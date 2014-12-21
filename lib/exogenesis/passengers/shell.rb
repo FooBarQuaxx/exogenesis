@@ -2,7 +2,7 @@ require 'exogenesis/support/passenger'
 
 # Executes shell commands
 class Shell < Passenger
-  register_as :shell
+  # register_as :shell
   needs :commands
   with_emoji :shell
 

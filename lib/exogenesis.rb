@@ -1,3 +1,4 @@
+require 'exogenesis/support/monkey_patch'
 require 'exogenesis/version'
 require 'exogenesis/passengers/dotfile'
 require 'exogenesis/passengers/homebrew'

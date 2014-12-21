@@ -2,7 +2,7 @@ require 'exogenesis/support/passenger'
 
 # Manages the Ruby Version Manager Rbenv and the ruby installer ruby-build
 class Rbenv < Passenger
-  register_as :rbenv
+  # register_as :rbenv
   needs :rubies
   with_emoji :cyclone
 

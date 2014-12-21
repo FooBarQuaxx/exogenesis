@@ -3,7 +3,7 @@ require 'exogenesis/support/passenger'
 # Install Python and pip packages
 # REQUIRES: Homebrew (so put it after your homebrew task)
 class Python < Passenger
-  register_as :python
+  # register_as :python
   needs :pips
   with_emoji :snake
 

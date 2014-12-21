@@ -3,7 +3,7 @@ require 'exogenesis/support/passenger'
 # Install NPM and NPM packages
 # REQUIRES: Homebrew (so put it after your homebrew task)
 class Npm < Passenger
-  register_as :npm
+  # register_as :npm
   needs :npms
   with_emoji :cyclone
 

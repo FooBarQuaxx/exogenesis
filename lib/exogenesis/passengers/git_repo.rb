@@ -3,7 +3,7 @@ require 'exogenesis/support/passenger'
 # Clone, Update and Delete Git Repos
 # REQUIRES: git
 class GitRepo < Passenger
-  register_as :git_repo
+  # register_as :git_repo
   needs :repos
   with_emoji :arrow_down
 

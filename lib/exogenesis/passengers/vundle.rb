@@ -4,7 +4,7 @@ require 'exogenesis/support/passenger'
 class Vundle < Passenger
   VUNDLE_REPO = 'git://github.com/gmarik/vundle.git'
 
-  register_as :vundle
+  # register_as :vundle
   with_emoji :gift
 
   def up
